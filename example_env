@@ -1,0 +1,31 @@
+# Database Configuration
+DB_HOST=db
+DB_PORT=5432
+DB_NAME=tradeoverseer
+DB_USER=postgres
+DB_PASS=your_secure_password_here
+
+# Database Test Configuration
+DB_HOST_TEST=db_test
+
+# Redis Configuration
+REDIS_HOST=redis
+REDIS_PORT=6379
+
+# Redis Test Configuration
+REDIS_HOST_TEST=redis_test
+
+# Authentication
+SECRET_AUTH=your_secure_secret_key_here
+
+# Access Control
+INSERT_ACCESS_KEY=your_access_key_here
+
+# Telegram Notifications
+ORDERS_NOTIFICATION_CHATS=chat_id1;chat_id2
+ORDERS_NOTIFICATION_BOT_TOKEN=your_telegram_bot_token_here
+
+# PostgreSQL specific variables (used by the db service)
+POSTGRES_DB=tradeoverseer
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=your_secure_password_here

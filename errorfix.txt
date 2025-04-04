@@ -1,0 +1,15 @@
+TORCH ERROR
+mkdir -p backend/torch
+wget -P backend/torch https://download.pytorch.org/whl/cpu/torch-1.11.0%2Bcpu-cp310-cp310-linux_x86_64.whl
+wget -P backend/torch https://download.pytorch.org/whl/cpu/torchvision-0.12.0%2Bcpu-cp310-cp310-linux_x86_64.whl
+
+SSL ERROR
+mkdir -p ./frontend/ssl
+touch ./frontend/ssl/test.txt  # Dummy file to test
+cd /etc/ssl
+openssl req -new -newkey rsa:2048 -days 365 -nodes -x509 -keyout ./private.key -out ./certificate.crt
+
+docker-compose down
+docker-compose build --no-cache web # REBUILD
+docker-compose up -d
+
